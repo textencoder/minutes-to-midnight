@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+    font-family: monospace;
+    text-align: center;
+    background-color:rgb(17, 28, 28);
+    cursor: wait;
+}
+
+#alert {
+    font-size: 2rem;
+    font-weight: 500; 
+    color: crimson;
+    animation: blinker 1s infinite;
+}
+
+#container {
+    font-size: 15rem;
+    font-weight: 900;
+    color: dodgerblue;
+    animation: backToBlue 5s;
+}
+
+#minutes-left {
+    font-size: 3rem;
+    font-weight: 500; 
+    color: dodgerblue;
+    padding: 20px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 20vh;
+    color: dodgerblue;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: dodgerblue;
+    cursor: wait;
+    height: 70%;
+    display: grid;
+    place-items: center;
+}
+
+ a:hover {
+    color: crimson;
+}
+
+img {
+    cursor: wait;
+    animation: fadeIn 2s;
+}
+
+@keyframes blinker {
+    0% {
+        opacity: 0%;
+    }
+
+    50% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
+    }
+}
+
+@keyframes backToBlue {
+    0% {
+        color: dodgerblue;
+    }
+
+    25%, 75% {
+        color: crimson; 
+    }
+    
+    100% {
+        color: dodgerblue;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #container {
+        font-size: 5rem;
+    }
+    #minutes-left {
+        font-size: 2rem;
+    }
+    #alert {
+        font-size: 1.5rem;
+    }
+    footer {
+        height: 30vh;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+    #container {
+        font-size: 10rem;
+    }
+    #minutes-left {
+        font-size: 2rem;
+    }
+    #alert {
+        font-size: 1.5rem;
+    }
+    footer {
+        height: 30vh;
+    }
+}
