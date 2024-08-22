@@ -25,3 +25,9 @@ timeContainer.innerHTML = minutesComma;
  }, 5000)
 
  //the only website designed to make you bounce
+
+  document.querySelectorAll('.seconds').forEach((second, index) => {
+     setTimeout(() => {
+         second.style.fill = "crimson";
+     }, (index + 1) * 1000)
+ })

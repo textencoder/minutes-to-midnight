@@ -3,13 +3,21 @@
     padding: 0;
 }
 
+svg {
+    position: absolute;
+    fill: none;
+    transform: scale(0.75);
+    height: 100%;
+    z-index: -1;
+}
+
 body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     font-family: monospace;
     text-align: center;
     background-color:rgb(17, 28, 28);
@@ -17,21 +25,21 @@ body {
 }
 
 #alert {
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: 500; 
     color: crimson;
     animation: blinker 1s infinite;
 }
 
 #container {
-    font-size: 15rem;
+    font-size: 5rem;
     font-weight: 900;
     color: dodgerblue;
     animation: backToBlue 5s;
 }
 
 #minutes-left {
-    font-size: 3rem;
+    font-size: 1rem;
     font-weight: 500; 
     color: dodgerblue;
     padding: 20px;
@@ -42,9 +50,9 @@ footer {
     bottom: 0;
     right: 0;
     left: 0;
-    height: 20vh;
+    height: 10vh;
     color: dodgerblue;
-    font-size: 1rem;
+    font-size: 0.75rem;
     display: flex;
     justify-content: center;
 }
@@ -60,6 +68,7 @@ a {
 
  a:hover {
     color: crimson;
+    cursor: pointer;
 }
 
 img {
@@ -109,25 +118,29 @@ img {
         font-size: 5rem;
     }
     #minutes-left {
-        font-size: 2rem;
+        font-size: 1rem;
     }
     #alert {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
     footer {
         height: 30vh;
+    }
+
+    svg {
+        transform: scale(0.5);
     }
 }
 
 @media screen and (min-width: 500px) and (max-width: 1000px) {
     #container {
-        font-size: 10rem;
+        font-size: 5rem;
     }
     #minutes-left {
-        font-size: 2rem;
+        font-size: 1rem;
     }
     #alert {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
     footer {
         height: 30vh;
