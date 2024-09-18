@@ -1,3 +1,7 @@
+:root {
+    --color-bg: rgb(17, 28, 28);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +24,7 @@ body {
     height: 100vh;
     font-family: monospace;
     text-align: center;
-    background-color:rgb(17, 28, 28);
+    background-color: var(--color-bg);
     cursor: default;
 }
 
@@ -61,7 +65,8 @@ a {
     text-decoration: none;
     color: dodgerblue;
     cursor: wait;
-    height: 70%;
+    height: 30%;
+    width: 10%;
     display: grid;
     place-items: center;
 }
@@ -126,13 +131,15 @@ img {
     footer {
         height: 30vh;
     }
-
+    a {
+        width: 25%;
+    }
     svg {
         width: 70%;
     }
 }
 
-@media screen and (min-width: 500px) and (max-width: 1000px) {
+@media screen and (min-width: 500px) and (max-width: 1080px) {
     #container {
         font-size: 6rem;
     }
@@ -144,5 +151,8 @@ img {
     }
     footer {
         height: 30vh;
+    }
+    a {
+        width: 15%;
     }
 }
