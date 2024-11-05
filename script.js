@@ -9,7 +9,7 @@ let twentyFive = new Date("January 1, 2025");
 //date display algorithms
 let dateEquation = Math.floor(((twentyFive - currentDate) / 1000) / 60);
 let dateArray = dateEquation.toString().split('')
-let minutesWithComma = dateArray.slice(0,3).join('') + "," + dateArray.slice(3,6).join('');
+let minutesWithComma = dateArray.slice(0,2).join('') + "," + dateArray.slice(2,5).join('');
 
 //display time
 timeContainer.innerHTML = minutesWithComma;

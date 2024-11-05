@@ -1,5 +1,5 @@
 :root {
-    --color-bg: rgb(17, 28, 28);
+    --color-bg: #111c1c;
 }
 
 * {
@@ -31,14 +31,14 @@ body {
 #alert {
     font-size: 1rem;
     font-weight: 500; 
-    color: crimson;
+    color: #dc143c;
     animation: blinker 1s infinite;
 }
 
 #container {
     font-size: 6rem;
     font-weight: 900;
-    color: dodgerblue;
+    color: #1e90ff;
     animation: backToBlue 5s;
 }
 
@@ -63,7 +63,7 @@ footer {
 
 a {
     text-decoration: none;
-    color: dodgerblue;
+    color: #1e90ff;
     cursor: wait;
     height: 30%;
     width: 10%;
