@@ -1,0 +1,12 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+    --color-bg: #111c1c;
+}
+
+html {
+    background-color: var(--color-bg);
+    color: dodgerblue;
+}
