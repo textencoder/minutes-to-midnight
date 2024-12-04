@@ -32,6 +32,7 @@ onMount(() => {
 </div>
 
 <style>
+
     #display { 
         width: 40rem;
         height: 30rem;
@@ -40,11 +41,11 @@ onMount(() => {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border: 1px solid dodgerblue;
+       
     }
 
     h1 {
-        font-size: 9rem;
+        font-size: 10rem;
     }
     
     h2 {

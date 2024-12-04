@@ -9,6 +9,7 @@
 </div>
 
 <div class="layout">
+	<div id="upper-content">
 <nav class="rounded" style="border-color:dodgerblue;">
 
 	<ul>
@@ -92,7 +93,29 @@
 <aside class="rounded">
 
 </aside>
+
 </div>
+
+<div id="bottom-bar" >
+	<div id="new-midnight" class="flex justify-center items-center">
+		<svg id="b" xmlns="http://www.w3.org/2000/svg" width="44.32" height="44.32" viewBox="0 0 44.32 44.32"><g id="c"><g id="d"><path d="M22.16,0C9.92,0,0,9.92,0,22.16s9.92,22.16,22.16,22.16,22.16-9.92,22.16-22.16S34.4,0,22.16,0ZM33.62,25.14h-8.47v8.47h-5.96v-8.47h-8.48v-5.96h8.48v-8.48h5.96v8.48h8.47v5.96Z" fill="#1e90ff"/></g></g></svg>
+	</div>
+	<div id="radio-player" class="flex justify-evenly items-center rounded">
+		<svg id="b" xmlns="http://www.w3.org/2000/svg" width="22.73" height="20.69" viewBox="0 0 22.73 20.69"><g id="c"><g id="d"><path d="M6.02,10.78c-.53,0-.97.41-1.01.92-.28-.06-.58-.1-.88-.1-2.28,0-4.13,1.85-4.13,4.13s1.85,4.13,4.13,4.13c.3,0,.6-.03.88-.1.05.52.49.92,1.01.92.56,0,1.02-.46,1.02-1.02v-7.87c0-.56-.46-1.02-1.02-1.02Z" fill="#1e90ff"/><path d="M16.71,20.69c.53,0,.97-.41,1.01-.92.28.06.58.1.88.1,2.28,0,4.13-1.85,4.13-4.13,0-2.28-1.85-4.13-4.13-4.13-.3,0-.6.03-.88.1-.05-.52-.49-.92-1.01-.92-.56,0-1.02.46-1.02,1.02v7.87c0,.56.46,1.02,1.02,1.02Z" fill="#1e90ff"/><path d="M2.98,11.11c0-.17-.02-.34-.02-.52C2.96,5.71,6.73,1.75,11.37,1.75s8.4,3.97,8.4,8.84c0,.17,0,.35-.02.52.6.29,1.15.6,1.66.95.06-.48.1-.97.1-1.46C21.52,4.75,16.96,0,11.37,0S1.21,4.75,1.21,10.59c0,.5.04.99.1,1.46.51-.34,1.07-.66,1.66-.95Z" fill="#1e90ff"/></g></g></svg>
+
+		<div id="waveform" class="rounded">
+
+		</div>
+
+		<svg id="b" xmlns="http://www.w3.org/2000/svg" width="11.88" height="16.03" viewBox="0 0 11.88 16.03"><g id="c"><g id="d"><rect width="4.86" height="16.03" fill="#1e90ff"/><rect x="7.02" width="4.86" height="16.03" fill="#1e90ff"/></g></g></svg>
+	</div>
+	<div id="volume" class="flex justify-center items-center">
+		<svg id="b" xmlns="http://www.w3.org/2000/svg" width="35.14" height="35.54" viewBox="0 0 35.14 35.54"><g id="c"><g id="d"><path d="M15.92.59c1.02-1.02,1.85-.67,1.85.77v32.83c0,1.44-.83,1.78-1.85.77l-9.57-9.57H0v-15.23h6.35L15.92.59Z" fill="#1e90ff"/><path d="M24.57,17.83c0-2.23-.97-4.36-2.67-5.82-.24-.21-.61-.19-.83.03l-1.05,1.08c-.11.11-.17.27-.17.43,0,.01,0,.02,0,.03,0,.17.09.33.22.44,1.14.95,1.79,2.34,1.79,3.82,0,1.46-.64,2.85-1.77,3.8-.13.11-.21.27-.22.44,0,.17.06.34.18.46l1.07,1.06c.23.22.59.24.83.02,1.67-1.46,2.63-3.57,2.63-5.78Z" fill="#1e90ff"/><path d="M29.73,17.8c0-3.64-1.46-7.03-4.11-9.54-.24-.23-.62-.22-.85.02l-1.05,1.07c-.11.11-.17.27-.17.43,0,0,0,0,0,.01,0,.16.07.32.19.43,2.11,2,3.28,4.69,3.28,7.58s-1.15,5.55-3.23,7.54c-.12.11-.19.27-.19.43,0,.16.06.32.18.44l1.07,1.06c.23.23.61.24.85,0,2.61-2.51,4.04-5.87,4.04-9.48Z" fill="#1e90ff"/><path d="M29.38,30.95c3.66-3.37,5.76-8.14,5.76-13.1,0-5.05-2.17-9.89-5.94-13.27-.24-.22-.61-.2-.84.03l-1.05,1.08c-.11.11-.17.27-.17.43,0,0,0,.01,0,.02,0,.17.08.32.2.43,3.23,2.87,5.09,6.98,5.09,11.28s-1.8,8.29-4.93,11.15c-.12.11-.19.27-.2.44,0,.17.06.33.18.45l1.07,1.06c.23.23.6.24.84.02Z" fill="#1e90ff"/></g></g></svg>
+	</div>
+</div>
+
+</div>
+
 
 
 <style>
@@ -105,15 +128,27 @@
 }
 
 .layout {
+	width: 100vw;
+	height: 85vh;
 	display: flex;
-	justify-content: space-evenly;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+#upper-content {
+	width: 80%;
+	height: 80%;
+	display: flex;
+	justify-content: space-between;
+
 }
 
 nav {
-    margin-left: 3em;
     border: 1px solid dodgerblue;
-    width: 200px;
-    height: 250px;
+    width: 250px;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,12 +183,44 @@ li svg {
 }
 
 aside {
-    margin-right: 3em;
     border: 1px solid dodgerblue;
-    width: 200px;
-    height: 250px;
+    width: 250px;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+#bottom-bar {
+
+	height: 5rem;
+	width: 80vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#new-midnight,
+#volume {
+	cursor: pointer;
+	width: 60px;
+	height: 60px;
+}
+
+#radio-player {
+	width: 250px;
+	height: 40px;
+	border: 1px solid dodgerblue;
+}
+
+#waveform {
+	width: 60%;
+	height: 80%;
+	border: 1px solid dodgerblue;
+}
+
+svg {
+	cursor: pointer;
+}
+
 </style>
