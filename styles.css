@@ -7,12 +7,16 @@
     padding: 0;
 }
 
-svg {
+#clock {
     position: absolute;
     fill: none;
     width: 90%;
     height: 90%;
     z-index: -1;
+}
+
+#logo {
+    width: 60%;
 }
 
 body {
@@ -64,16 +68,11 @@ footer {
 a {
     text-decoration: none;
     color: #1e90ff;
-    cursor: wait;
+    cursor: pointer;
     height: 30%;
-    width: 10%;
+    width: 15%;
     display: grid;
     place-items: center;
-}
-
- a:hover {
-    color: crimson;
-    cursor: pointer;
 }
 
 img {
@@ -134,7 +133,7 @@ img {
     a {
         width: 25%;
     }
-    svg {
+    #clock {
         width: 70%;
     }
 }

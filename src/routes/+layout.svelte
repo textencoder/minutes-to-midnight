@@ -4,6 +4,10 @@
 
 </script>
 
+<svelte:head>
+	<link rel="stylesheet" href="https://use.typekit.net/xiq1lwe.css">
+</svelte:head>
+
 <div id="marquee" class="h-10 w-screen">
 	welcome to minutesxm!
 </div>
@@ -119,6 +123,7 @@
 
 
 <style>
+	
 	#marquee {
     display: flex;
     justify-content: center;

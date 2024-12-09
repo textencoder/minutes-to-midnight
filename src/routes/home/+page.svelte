@@ -5,7 +5,12 @@ import {onMount} from 'svelte';
 let currentDate = new Date();
 let endDate = new Date("January 1, 2025");
 
-$: differenceInMinutes = Math.floor(((endDate - currentDate) / 1000) / 60);
+$: differenceInMinutes = Math.floor(((endDate - currentDate) / 1000) / 60)
+.toString()
+.split('')
+.toSpliced(2, 0, ',')
+.join('');
+
 
 onMount(() => {
     const intervalId = setInterval(() => {
