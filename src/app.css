@@ -9,4 +9,5 @@
 html {
     background-color: var(--color-bg);
     color: dodgerblue;
+    overflow: hidden;
 }

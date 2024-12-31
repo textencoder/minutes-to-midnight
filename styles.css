@@ -7,7 +7,11 @@
     padding: 0;
 }
 
-svg {
+html {
+    overflow: hidden;
+}
+
+#clock {
     position: absolute;
     fill: none;
     width: 90%;
@@ -17,7 +21,6 @@ svg {
 
 body {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100vw;
@@ -28,6 +31,15 @@ body {
     cursor: default;
 }
 
+#face {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 60%;
+}
+
 #alert {
     font-size: 1rem;
     font-weight: 500; 
@@ -36,44 +48,28 @@ body {
 }
 
 #container {
-    font-size: 6rem;
+    font-size: 8rem;
     font-weight: 900;
     color: #1e90ff;
     animation: backToBlue 5s;
 }
 
 #minutes-left {
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 500; 
     color: dodgerblue;
     padding: 20px;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    height: 30vh;
-    color: dodgerblue;
-    font-size: 0.75rem;
-    display: flex;
-    justify-content: center;
-}
-
 a {
+    display: flex;
     text-decoration: none;
     color: #1e90ff;
-    cursor: wait;
-    height: 30%;
+    cursor: pointer;
+    height: 10%;
     width: 10%;
     display: grid;
     place-items: center;
-}
-
- a:hover {
-    color: crimson;
-    cursor: pointer;
 }
 
 img {
@@ -128,13 +124,10 @@ img {
     #alert {
         font-size: 1rem;
     }
-    footer {
-        height: 30vh;
-    }
     a {
         width: 25%;
     }
-    svg {
+    #clock {
         width: 70%;
     }
 }
@@ -144,15 +137,12 @@ img {
         font-size: 6rem;
     }
     #minutes-left {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
     #alert {
         font-size: 1rem;
     }
-    footer {
-        height: 30vh;
-    }
     a {
-        width: 15%;
+        width: 20%;
     }
 }

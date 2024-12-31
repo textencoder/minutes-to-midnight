@@ -1,15 +1,24 @@
 <script lang="ts">
 	import '../app.css';
 	let { children } = $props();
+
 </script>
+
+<svelte:head>
+	<link rel="stylesheet" href="https://use.typekit.net/xiq1lwe.css">
+</svelte:head>
 
 <div id="marquee" class="h-10 w-screen">
 	welcome to minutesxm!
 </div>
 
 <div class="layout">
+	<div id="upper-content">
 <nav class="rounded" style="border-color:dodgerblue;">
+
 	<ul>
+
+		<a href="/home" class="hover:bg-gray-700">
 		<li>
 			<svg id="b" xmlns="http://www.w3.org/2000/svg" width="28.95" height="23.99" viewBox="0 0 28.95 23.99">
 				<g id="c">
@@ -21,6 +30,9 @@
 			</svg>
 			Home
 		</li>
+	</a>
+
+	<a href="browse" class="hover:bg-gray-700">
 		<li>
 			<svg id="b" xmlns="http://www.w3.org/2000/svg" width="29.88" height="29.25" viewBox="0 0 29.88 29.25">
 				<g id="c">
@@ -46,6 +58,9 @@
 	</svg>
 			Browse
 		</li>
+	</a>
+
+	<a href="goals" class="hover:bg-gray-700">
 		<li>
 			<svg id="b" xmlns="http://www.w3.org/2000/svg" width="25.25" height="27.74" viewBox="0 0 25.25 27.74"><g id="c"><g id="d"><path d="M24.28,15.49h-2.16v4.76h2.16c.54,0,.97-.44.97-.98v-2.81c0-.54-.44-.97-.97-.97Z" fill="#1e90ff"/><path d="M24.28,9.17h-2.16v4.76h2.16c.54,0,.97-.43.97-.97v-2.82c0-.54-.44-.97-.97-.97Z" fill="#1e90ff"/><path d="M24.28,2.84h-2.16v4.76h2.16c.54,0,.97-.44.97-.97v-2.81c0-.54-.44-.97-.97-.97Z" fill="#1e90ff"/><path d="M22.06,25.31c0,.45-.36.81-.81.81H2.43c-.45,0-.81-.36-.81-.81v-.33h17.51c.9,0,1.62-.73,1.62-1.62V1.62c0-.9-.73-1.62-1.62-1.62H1.62C.73,0,0,.72,0,1.62v21.73s0,0,0,0v1.95c0,1.34,1.09,2.43,2.43,2.43h18.81c1.34,0,2.43-1.09,2.43-2.43v-3.37h-1.62v3.37Z" fill="#1e90ff"/>
 			</g>
@@ -53,17 +68,26 @@
 	</svg>
 			My Goals
 		</li>
+	</a>
+
+	<a href="listen" class="hover:bg-gray-700">
 		<li>
 			<svg id="b" xmlns="http://www.w3.org/2000/svg" width="29.82" height="31.27" viewBox="0 0 29.82 31.27">
 				<g id="c">
 					<path id="d" d="M29.13.01L9.33,3.66c-.54.09-.6.84-.6.84v16.34c-1.63-.49-3.55-.37-5.27.49-3.08,1.54-4.34,4.86-2.81,7.4,1.52,2.54,5.2,3.23,8.34,1.81,3.9-1.76,3.6-6.53,3.6-6.78v-11.15s13.36-2.34,13.36-2.34v8.05c-1.63-.49-3.55-.36-5.27.49-3.08,1.55-4.34,4.86-2.81,7.4,1.52,2.54,5.16,3.15,8.34,1.8,3.93-1.67,3.6-6.52,3.6-6.78l-.02-20.66c.12-.27-.12-.66-.66-.57ZM25.95,9.02l-13.36,2.34v-4.2s13.36-2.46,13.36-2.46v4.32Z" fill="#1e90ff"/></g></svg>
 			Listen
 		</li>
+	</a>
+
+	<a href="about" class="hover:bg-gray-700">
 		<li>
 			<svg id="b" xmlns="http://www.w3.org/2000/svg" width="31.31" height="31.31" viewBox="0 0 31.31 31.31"><g id="c"><g id="d"><path d="M26.73,4.59C20.61-1.53,10.7-1.53,4.59,4.59,1.53,7.64,0,11.65,0,15.66s1.53,8.01,4.59,11.07c6.11,6.11,16.03,6.11,22.14,0,3.06-3.06,4.59-7.06,4.59-11.07s-1.53-8.01-4.59-11.07ZM24.8,24.8c-2.44,2.44-5.69,3.79-9.15,3.79s-6.7-1.35-9.15-3.79c-2.44-2.44-3.79-5.69-3.79-9.15s1.35-6.7,3.79-9.15c2.44-2.44,5.69-3.79,9.15-3.79s6.7,1.35,9.15,3.79c2.44,2.44,3.79,5.69,3.79,9.15s-1.35,6.7-3.79,9.15Z" fill="#1e90ff"/><path d="M16.64,20.45c-.2-.19-.44-.35-.7-.46-.27-.11-.56-.17-.87-.17s-.61.06-.88.17c-.27.11-.5.27-.7.46-.2.19-.35.42-.47.68s-.17.54-.17.84.06.58.17.85c.11.26.27.49.47.68.2.19.43.34.7.45.27.11.56.16.88.16s.6-.05.87-.16c.27-.11.5-.26.7-.45.2-.19.36-.42.47-.68.11-.26.17-.55.17-.85s-.06-.58-.17-.84-.27-.49-.47-.68Z" fill="#1e90ff"/><path d="M19.39,7.21c-.44-.39-.98-.69-1.61-.9-.63-.21-1.34-.31-2.13-.31-.56,0-1.08.05-1.56.14s-.93.23-1.35.4c-.42.17-.81.37-1.18.6-.36.23-.7.47-1.01.73l1.03,1.58c.18.31.44.46.8.46.16,0,.32-.05.48-.14.16-.09.35-.2.56-.31s.47-.22.77-.31c.3-.09.67-.14,1.11-.14.58,0,1.03.15,1.36.45.33.3.5.7.5,1.2,0,.42-.09.78-.26,1.09-.18.31-.4.58-.67.83-.27.25-.56.48-.87.69-.31.21-.6.43-.87.67-.27.23-.49.48-.67.76-.18.28-.26.6-.26.97,0,.05,0,.1,0,.15,0,.05.01.1.02.15l.28,2.02h2.66l.35-1.76c.05-.26.18-.49.4-.7.21-.21.47-.42.75-.64.29-.22.59-.45.92-.7.32-.25.62-.54.89-.89.27-.34.5-.74.67-1.21.18-.46.26-1.01.26-1.66s-.12-1.28-.36-1.83c-.24-.55-.58-1.02-1.02-1.41Z" fill="#1e90ff"/></g></g></svg>
 			About
 		</li>
+	</a>
+
 	</ul>
+
 </nav>
 
 <main>
@@ -73,10 +97,33 @@
 <aside class="rounded">
 
 </aside>
+
+</div>
+
+<div id="bottom-bar" >
+	<div id="new-midnight" class="flex justify-center items-center">
+		<svg id="b" xmlns="http://www.w3.org/2000/svg" width="44.32" height="44.32" viewBox="0 0 44.32 44.32"><g id="c"><g id="d"><path d="M22.16,0C9.92,0,0,9.92,0,22.16s9.92,22.16,22.16,22.16,22.16-9.92,22.16-22.16S34.4,0,22.16,0ZM33.62,25.14h-8.47v8.47h-5.96v-8.47h-8.48v-5.96h8.48v-8.48h5.96v8.48h8.47v5.96Z" fill="#1e90ff"/></g></g></svg>
+	</div>
+	<div id="radio-player" class="flex justify-evenly items-center rounded">
+		<svg id="b" xmlns="http://www.w3.org/2000/svg" width="22.73" height="20.69" viewBox="0 0 22.73 20.69"><g id="c"><g id="d"><path d="M6.02,10.78c-.53,0-.97.41-1.01.92-.28-.06-.58-.1-.88-.1-2.28,0-4.13,1.85-4.13,4.13s1.85,4.13,4.13,4.13c.3,0,.6-.03.88-.1.05.52.49.92,1.01.92.56,0,1.02-.46,1.02-1.02v-7.87c0-.56-.46-1.02-1.02-1.02Z" fill="#1e90ff"/><path d="M16.71,20.69c.53,0,.97-.41,1.01-.92.28.06.58.1.88.1,2.28,0,4.13-1.85,4.13-4.13,0-2.28-1.85-4.13-4.13-4.13-.3,0-.6.03-.88.1-.05-.52-.49-.92-1.01-.92-.56,0-1.02.46-1.02,1.02v7.87c0,.56.46,1.02,1.02,1.02Z" fill="#1e90ff"/><path d="M2.98,11.11c0-.17-.02-.34-.02-.52C2.96,5.71,6.73,1.75,11.37,1.75s8.4,3.97,8.4,8.84c0,.17,0,.35-.02.52.6.29,1.15.6,1.66.95.06-.48.1-.97.1-1.46C21.52,4.75,16.96,0,11.37,0S1.21,4.75,1.21,10.59c0,.5.04.99.1,1.46.51-.34,1.07-.66,1.66-.95Z" fill="#1e90ff"/></g></g></svg>
+
+		<div id="waveform" class="rounded">
+
+		</div>
+
+		<svg id="b" xmlns="http://www.w3.org/2000/svg" width="11.88" height="16.03" viewBox="0 0 11.88 16.03"><g id="c"><g id="d"><rect width="4.86" height="16.03" fill="#1e90ff"/><rect x="7.02" width="4.86" height="16.03" fill="#1e90ff"/></g></g></svg>
+	</div>
+	<div id="volume" class="flex justify-center items-center">
+		<svg id="b" xmlns="http://www.w3.org/2000/svg" width="35.14" height="35.54" viewBox="0 0 35.14 35.54"><g id="c"><g id="d"><path d="M15.92.59c1.02-1.02,1.85-.67,1.85.77v32.83c0,1.44-.83,1.78-1.85.77l-9.57-9.57H0v-15.23h6.35L15.92.59Z" fill="#1e90ff"/><path d="M24.57,17.83c0-2.23-.97-4.36-2.67-5.82-.24-.21-.61-.19-.83.03l-1.05,1.08c-.11.11-.17.27-.17.43,0,.01,0,.02,0,.03,0,.17.09.33.22.44,1.14.95,1.79,2.34,1.79,3.82,0,1.46-.64,2.85-1.77,3.8-.13.11-.21.27-.22.44,0,.17.06.34.18.46l1.07,1.06c.23.22.59.24.83.02,1.67-1.46,2.63-3.57,2.63-5.78Z" fill="#1e90ff"/><path d="M29.73,17.8c0-3.64-1.46-7.03-4.11-9.54-.24-.23-.62-.22-.85.02l-1.05,1.07c-.11.11-.17.27-.17.43,0,0,0,0,0,.01,0,.16.07.32.19.43,2.11,2,3.28,4.69,3.28,7.58s-1.15,5.55-3.23,7.54c-.12.11-.19.27-.19.43,0,.16.06.32.18.44l1.07,1.06c.23.23.61.24.85,0,2.61-2.51,4.04-5.87,4.04-9.48Z" fill="#1e90ff"/><path d="M29.38,30.95c3.66-3.37,5.76-8.14,5.76-13.1,0-5.05-2.17-9.89-5.94-13.27-.24-.22-.61-.2-.84.03l-1.05,1.08c-.11.11-.17.27-.17.43,0,0,0,.01,0,.02,0,.17.08.32.2.43,3.23,2.87,5.09,6.98,5.09,11.28s-1.8,8.29-4.93,11.15c-.12.11-.19.27-.2.44,0,.17.06.33.18.45l1.07,1.06c.23.23.6.24.84.02Z" fill="#1e90ff"/></g></g></svg>
+	</div>
+</div>
+
 </div>
 
 
+
 <style>
+	
 	#marquee {
     display: flex;
     justify-content: center;
@@ -86,15 +133,27 @@
 }
 
 .layout {
+	width: 100vw;
+	height: 85vh;
 	display: flex;
-	justify-content: space-evenly;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+#upper-content {
+	width: 80%;
+	height: 80%;
+	display: flex;
+	justify-content: space-between;
+
 }
 
 nav {
-    margin-left: 3em;
     border: 1px solid dodgerblue;
-    width: 200px;
-    height: 250px;
+    width: 250px;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,13 +168,19 @@ ul {
     align-items: center;
 }
 
-li {
+a {
     border-radius: 2px;
-    width: 80%;
-    height: 15%;
+    width: 90%;
+    height: 16%;
     display:flex;
-    align-items: center;
     cursor: pointer;
+}
+
+li {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
 }
 
 li svg {
@@ -123,12 +188,44 @@ li svg {
 }
 
 aside {
-    margin-right: 3em;
     border: 1px solid dodgerblue;
-    width: 200px;
-    height: 250px;
+    width: 250px;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+#bottom-bar {
+
+	height: 5rem;
+	width: 80vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#new-midnight,
+#volume {
+	cursor: pointer;
+	width: 60px;
+	height: 60px;
+}
+
+#radio-player {
+	width: 250px;
+	height: 40px;
+	border: 1px solid dodgerblue;
+}
+
+#waveform {
+	width: 60%;
+	height: 80%;
+	border: 1px solid dodgerblue;
+}
+
+svg {
+	cursor: pointer;
+}
+
 </style>
