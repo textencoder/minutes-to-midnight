@@ -12,7 +12,7 @@ let dateArray = dateEquation.toString().split('')
 let minutesWithComma = dateArray.slice(0,2).join('') + "," + dateArray.slice(2,5).join('');
 
 //display time
-timeContainer.innerHTML = minutesWithComma;
+timeContainer.innerHTML = dateEquation;
 
 //refresh after one minute
  setTimeout(() => {
