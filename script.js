@@ -4,15 +4,15 @@ const alertDiv = document.getElementById('alert');
 
 //date declarations
 let currentDate = new Date();
-let twentyFive = new Date("January 1, 2025");
+let twentySix = new Date("January 1, 2026");
 
 //date display algorithms
-let dateEquation = Math.floor(((twentyFive - currentDate) / 1000) / 60);
+let dateEquation = Math.floor(((twentySix - currentDate) / 1000) / 60);
 let dateArray = dateEquation.toString().split('')
-let minutesWithComma = dateArray.slice(0,1).join('') + "," + dateArray.slice(1,5).join('');
+let minutesWithComma = dateArray.slice(0,3).join('') + "," + dateArray.slice(3,6).join('');
 
 //display time
-timeContainer.innerHTML = dateEquation;
+timeContainer.innerHTML = minutesWithComma;
 
 //refresh after one minute
  setTimeout(() => {
