@@ -9,9 +9,9 @@ export default function Logo() {
       <text
         transform="translate(0 102.76)"
         fill="#1e90ff"
-        font-family="Oxanium-Bold, Oxanium"
-        font-size="121.61"
-        font-weight="700"
+        fontFamily="Oxanium-Bold, Oxanium"
+        fontSize="121.61"
+        fontWeight="700"
       >
         <tspan x="0" y="0">
           minutes
