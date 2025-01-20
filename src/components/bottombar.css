@@ -9,8 +9,13 @@
 }
 
 #player {
-    border: 1px solid dodgerblue;
+    /*border gradient NON TRANSPARENT*/
     border-radius: 5px;
+    background-image: linear-gradient(145deg, dodgerblue, rgb(126, 48, 203));
+    background-origin: border-box;
+    box-shadow: inset 0 100vw black;
+    border: 1px solid transparent;
+    
     width: 275px;
     height: 75%;
     display: flex;
@@ -24,8 +29,14 @@
 }
 
 #waveform {
-    border: 1px solid dodgerblue;
-    border-radius: 5px;;
+    /*border gradient NON TRANSPARENT*/
+    border-radius: 5px;
+    background-image: linear-gradient(145deg, dodgerblue, rgb(126, 48, 203));
+    background-origin: border-box;
+    box-shadow: inset 0 100vw black;
+    border: 1px solid transparent;
+
+    border-radius: 5px;
     width: 60%;
     height: 70%;
 }

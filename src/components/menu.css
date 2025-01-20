@@ -1,6 +1,6 @@
 nav {
     
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: dodgerblue;
 }
 
@@ -16,7 +16,7 @@ li {
     display: grid;
     grid-template-columns: 30px 3fr;
     gap: 20px;
-    padding: 10px 10px 10px 30px;
+    padding: 10px 10px 10px 15px;
     cursor: pointer;
 
     svg {
@@ -36,13 +36,16 @@ li {
 
 li:hover {
     background: black;
-    border-radius: 50px;
+    border-radius: 10px;
 }
 
 @media screen and (min-width: 500px) and (max-width: 1280px) {
     nav {
         li {
             grid-template-columns: 30px;
+            max-width: 60px;
+            padding: 10px;
+            place-content: center;
         }
 
         p {
