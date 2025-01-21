@@ -12,8 +12,10 @@ export default function Menu() {
           >
             <defs>
         <linearGradient id="MyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="dodgerblue" />
-          <stop offset="100%" stopColor="#7e30cb" />
+          {/* <stop offset="0%" stopColor="dodgerblue" />
+          <stop offset="100%" stopColor="#7e30cb" /> */}
+          <stop offset="0%" stopColor="white" />
+          <stop offset="100%" stopColor="whitesmoke" />
         </linearGradient>
       </defs>
             <path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z" />
