@@ -1,5 +1,53 @@
 import myAudio from "../../../public/TomNookSentMe_106bpm.mp3";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
+
+const AudioBars = () => {
+  const barsRef = useRef([]);
+
+  useEffect(() => {
+    // Iterate over the bars (using the ref array)
+    barsRef.current.forEach(bar => {
+      // Generate random animation delay and duration
+      const randomDelay = Math.random() * 2; // Delay between 0 and 2 seconds
+      const randomDuration = Math.random() * 1 + 1; // Duration between 1 and 2 seconds
+
+      // Apply random styles
+      bar.style.animationDelay = `${randomDelay}s`;
+      bar.style.animationDuration = `${randomDuration}s`;
+    });
+  }, []);
+
+  return (
+<svg className="audiogram col" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 200">
+      <defs>
+        <linearGradient id="audiogram-background" x1="0.5" y1="0" x2="0.5" y2="1">
+          <stop offset="0%" stopColor="white" />
+          <stop offset="100%" stopColor="whitesmoke" />
+        </linearGradient>
+      </defs>
+      {[...Array(50)].map((_, index) => {
+        const x = (index + 1) * 40;
+        const height = Math.random() * 100 + 150; // Random height between 50 and 150
+
+        const y = (200 / 2) - (height / 2);
+        
+        return (
+          <rect
+            key={index}
+            className="audio-bar"
+            fill="url(#audiogram-background)"
+            height={height}
+            x={x}
+            y={y} // Adjust the y position to fit within the viewBox
+            rx="5"
+            ry="5"
+            ref={(el) => barsRef.current[index] = el} // Assign the ref to each rect element
+          />
+        );
+      })}
+    </svg>
+  );
+};
 
 export default function Player() {
   const audioRef = useRef(null);
@@ -45,6 +93,11 @@ export default function Player() {
           <source src={myAudio} type="audio/mpeg" />
           Your browser does not support the audio element.
         </audio>
+
+      {
+        isPlaying && <AudioBars />
+      }
+        
       </div>
 
       <button>
