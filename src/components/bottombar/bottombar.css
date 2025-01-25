@@ -31,6 +31,11 @@
         display: grid;
         place-items: center;
     }
+
+    svg {
+        width: 30px;
+        fill: whitesmoke;
+    }
 }
 
 #waveform {
@@ -76,14 +81,19 @@
     z-index: 1;
 }
 
-
-
 svg {
     fill: url('#MyGradient');
 }
 
 @media screen and (max-width: 540px) {
-    #bottom {
+    #new-midnight,
+    #volume {
       display: none;
     }
+
+    #bottom {
+        max-width: 80%;
+    }
+
+   
   }

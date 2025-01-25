@@ -54,7 +54,7 @@ li:hover {
   border-radius: 10px;
 }
 
-@media screen and (min-width: 500px) and (max-width: 1280px) {
+@media screen and (min-width: 60px) and (max-width: 1280px) {
   nav {
     li {
       grid-template-columns: 30px;
@@ -69,7 +69,7 @@ li:hover {
   }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 600px) {
   nav {
     display: none;
   }

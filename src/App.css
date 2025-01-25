@@ -83,3 +83,15 @@
       opacity: 0%;
   }
 }
+
+@media screen and (max-width: 540px) {
+  #root {
+    width: 80%;
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+
+  #face {
+      max-width: 90%;
+  }
+}
