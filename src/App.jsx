@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import Logo from './components/logo';
+import Logo from './components/watch-face/logo';
 
 import './App.css'
-import Minutes from './components/minutes';
-import Alert from './components/alert';
+import Minutes from './components/watch-face/minutes';
+import Alert from './components/watch-face/alert';
 //import Menu from './components/menu';
 //import RelatedContent from './components/related';
 import BottomBar from './components/bottombar/bottombar';
