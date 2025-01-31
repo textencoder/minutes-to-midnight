@@ -1,18 +1,10 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 #root {
-  width: 80vw;
-  height: 100dvh;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 80%;
+  height: 100%;
+  padding-bottom: 20px;
   font-family: monospace;
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
+  place-items: center;
   grid-template-rows: 10fr 1fr;
 }
 
@@ -37,7 +29,7 @@
 }
 
 #time-container {
-  font-size: 2rem;
+  font-size: 4rem;
   color: dodgerblue;
 }
 
@@ -84,14 +76,38 @@
   }
 }
 
-@media screen and (max-width: 540px) {
-  #root {
-    width: 80%;
-    grid-template-columns: 1fr;
-    place-items: center;
+@media screen and (max-width: 700px) {
+  #alert {
+    font-size: 0.8rem;
+  }
+  
+  #time-container {
+    font-size: 3rem;   
+  }
+  
+  #minutes-left {
+    font-size: 1rem;
   }
 
-  #face {
-      max-width: 90%;
+  #b {
+    width: 125px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #alert {
+    font-size: 0.6rem;
+  }
+  
+  #time-container {
+    font-size: 2rem;   
+  }
+  
+  #minutes-left {
+    font-size: 0.8rem;
+  }
+
+  #b {
+    width: 100px;
   }
 }
