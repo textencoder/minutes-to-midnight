@@ -1,11 +1,11 @@
 #root {
   width: 80%;
   height: 100%;
-  padding-bottom: 20px;
-  font-family: monospace;
-  display: grid;
-  place-items: center;
-  grid-template-rows: 10fr 1fr;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #b {
@@ -22,6 +22,8 @@
 }
 
 #alert {
+  font-family: 'Oxanium', sans-serif;
+  font-weight: 200;
   font-size: 1rem;
   font-weight: 500; 
   color: #dc143c;
@@ -29,11 +31,17 @@
 }
 
 #time-container {
-  font-size: 4rem;
+  font-family: 'Oxanium', sans-serif;
+  font-weight: 600;
+  font-size: 8rem;
   color: dodgerblue;
+  display: grid;
+  place-items: center;
 }
 
 #minutes-left {
+  font-family: 'Oxanium', sans-serif;
+  font-weight: 200;
   font-size: 1.5rem;
   font-weight: 500; 
   color: dodgerblue;
@@ -43,6 +51,13 @@
 .backToBlue {
   animation: backToBlue 5s;
 }
+
+/* .gradient-text {
+  background: linear-gradient(45deg, dodgerblue, #7e30cb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+} */
 
 @keyframes backToBlue {
   0% {
@@ -82,7 +97,7 @@
   }
   
   #time-container {
-    font-size: 3rem;   
+    font-size: 6.5rem;   
   }
   
   #minutes-left {
@@ -100,7 +115,7 @@
   }
   
   #time-container {
-    font-size: 2rem;   
+    font-size: 5rem;   
   }
   
   #minutes-left {

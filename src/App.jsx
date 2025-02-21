@@ -12,21 +12,20 @@ function App() {
 
   return (
     <>
+    <div>
+        <a href="https://www.github.com/textencoder" target="_blank">
+          <Logo className="logo" alt="minutesXM logo"/>
+        </a>
+      </div>
 
     <div id="face">
       <Alert />
 
       <Minutes />
 
-      <div id="minutes-left">
+      <p id="minutes-left">
         minutes left in 2025
-      </div>
-
-      <div>
-        <a href="https://www.github.com/textencoder" target="_blank">
-          <Logo className="logo" alt="minutesXM logo"/>
-        </a>
-      </div>
+      </p>
     </div>
 
     

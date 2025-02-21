@@ -23,9 +23,9 @@ const Minutes = () => {
   }, []);
 
   return (
-    <div id="time-container" className={animate ? 'backToBlue' : ''}>
-      <h1>{minutesWithComma}</h1>
-    </div>
+      <h1 id="time-container" className={animate ? 'backToBlue' : ''}>
+        {minutesWithComma}
+        </h1>
   );
 };
 
