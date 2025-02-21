@@ -58,19 +58,18 @@
   font-size: 1.5rem;
   font-weight: 500; 
   color: dodgerblue;
-  padding: 20px;
 }
 
 .backToBlue {
   animation: backToBlue 5s;
 }
 
-/* .gradient-text {
-  background: linear-gradient(45deg, dodgerblue, #7e30cb);
+.gradient-text {
+  background: linear-gradient(45deg, skyblue, dodgerblue);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-} */
+}
 
 @keyframes backToBlue {
   0% {

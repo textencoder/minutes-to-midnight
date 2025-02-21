@@ -26,6 +26,7 @@ function App() {
       <p id="minutes-left">
         minutes left in 2025
       </p>
+     
     </div>
 
     

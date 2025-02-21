@@ -21,7 +21,7 @@ const AudioBars = () => {
 <svg className="audiogram col" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 200">
       <defs>
         <linearGradient id="audiogram-background" x1="0.5" y1="0" x2="0.5" y2="1" gradientTransform="rotate(-25)">
-          <stop offset="0%" stopColor="skyblue" />
+          <stop offset="0%" stopColor="deepskyblue" />
           <stop offset="100%" stopColor="dodgerblue" />
         </linearGradient>
       </defs>
@@ -108,7 +108,7 @@ export default function Player() {
         >
           <defs>
         <linearGradient id="MyGradient" x1="0.5" y1="0" x2="0.5" y2="1" gradientTransform="rotate(-25)">
-          <stop offset="0%" stopColor="skyblue" />
+          <stop offset="0%" stopColor="deepskyblue" />
           <stop offset="100%" stopColor="dodgerblue" />
         </linearGradient>
       </defs>

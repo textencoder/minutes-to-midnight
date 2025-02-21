@@ -1,5 +1,5 @@
 :root {
-    --gradient-dark: linear-gradient(145deg, skyblue, dodgerblue);
+    --gradient-dark: linear-gradient(145deg, deepskyblue, dodgerblue);
     --gradient-main: linear-gradient(145deg, white, whitesmoke);
 }
 
@@ -7,7 +7,7 @@
     /*border gradient NON TRANSPARENT*/
     background-image: var(--gradient-dark);
     background-origin: border-box;
-    box-shadow: inset 0 100vw rgb(6, 6, 6);
+    box-shadow: inset 0 100vw rgb(12, 12, 12);
     border: 1px solid transparent;
     
     border-radius: 5px;
@@ -32,7 +32,7 @@
     /*border gradient NON TRANSPARENT*/
     background-image: var(--gradient-dark);
     background-origin: border-box;
-    box-shadow: inset 0 100vw rgb(6, 6, 6);
+    box-shadow: inset 0 100vw rgb(12, 12, 12);
     border: 1px solid transparent;
 
     
