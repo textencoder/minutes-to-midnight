@@ -6,10 +6,23 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  cursor: default;
 }
 
 #b {
   width: 150px;
+
+  fill: rgba(255, 255, 255, 0.25);
+}
+
+#b:hover {
+  text {
+    fill: dodgerblue;
+  }
+
+  path {
+    fill: crimson;
+  }
 }
 
 #face {
@@ -93,7 +106,7 @@
 
 @media screen and (max-width: 700px) {
   #alert {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   
   #time-container {
@@ -101,7 +114,7 @@
   }
   
   #minutes-left {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   #b {
@@ -111,7 +124,7 @@
 
 @media screen and (max-width: 500px) {
   #alert {
-    font-size: 0.6rem;
+    font-size: 1rem;
   }
   
   #time-container {
@@ -119,7 +132,7 @@
   }
   
   #minutes-left {
-    font-size: 0.8rem;
+    font-size: 1.25rem;
   }
 
   #b {

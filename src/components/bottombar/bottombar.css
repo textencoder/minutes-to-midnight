@@ -1,5 +1,5 @@
 :root {
-    --gradient-dark: linear-gradient(145deg, dodgerblue, #7e30cb);
+    --gradient-dark: linear-gradient(145deg, skyblue, dodgerblue);
     --gradient-main: linear-gradient(145deg, white, whitesmoke);
 }
 
