@@ -1,0 +1,32 @@
+#b {
+    width: 150px;
+    display: grid;
+    place-items: center;
+   
+    text {
+      fill: rgba(255, 255, 255, 0.25);
+      transition: fill 0.3s ease;
+    }
+  
+    path {
+      fill: rgba(255, 255, 255, 0.25);
+      transition: fill 0.3s ease;
+    }
+  }
+  
+#b:hover {
+    text {
+      fill: dodgerblue;
+    }
+  
+    path {
+      fill: crimson;
+    }
+  }
+
+p {
+    font-family: 'Oxanium';
+    text-align: center;
+    font-size: 0.9rem;
+    color: crimson;
+}
