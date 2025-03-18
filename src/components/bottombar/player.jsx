@@ -1,4 +1,4 @@
-import myAudio from "../../../public/TomNookSentMe_106bpm.mp3";
+import TomNook from "../../../public/TomNookSentMe_106bpm.mp3";
 import { useRef, useState, useEffect } from "react";
 
 const AudioBars = () => {
@@ -90,7 +90,7 @@ export default function Player() {
 
       <div id="waveform">
         <audio ref={audioRef} loop>
-          <source src={myAudio} type="audio/mpeg" />
+          <source src={TomNook} type="audio/mpeg" />
           Your browser does not support the audio element.
         </audio>
 
