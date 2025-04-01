@@ -30,7 +30,7 @@
 #time-container {
   font-family: 'Oxanium', sans-serif;
   font-weight: 600;
-  font-size: 8rem;
+  font-size: clamp(4rem, 18vw, 8rem);
   color: dodgerblue;
   display: grid;
   place-items: center;
@@ -39,7 +39,7 @@
 #minutes-left {
   font-family: 'Oxanium', sans-serif;
   font-weight: 200;
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 4vw, 1.5rem);
   font-weight: 500; 
   color: dodgerblue;
 }
@@ -77,41 +77,5 @@
 
   100% {
       opacity: 0%;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  #alert {
-    font-size: 1rem;
-  }
-  
-  #time-container {
-    font-size: 6.5rem;   
-  }
-  
-  #minutes-left {
-    font-size: 1.5rem;
-  }
-
-  #b {
-    width: 125px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  #alert {
-    font-size: 1rem;
-  }
-  
-  #time-container {
-    font-size: 5rem;   
-  }
-  
-  #minutes-left {
-    font-size: 1.25rem;
-  }
-
-  #b {
-    width: 100px;
   }
 }

@@ -1,5 +1,6 @@
 #b {
     width: 150px;
+    width: clamp(100px, 35vw, 150px);
     display: grid;
     place-items: center;
    
