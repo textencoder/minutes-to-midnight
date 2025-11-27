@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const Minutes = () => {
-  const [minutesWithComma, setMinutesWithComma] = useState('');
+  const [minutesWithComma, setMinutesWithComma] = useState("");
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
     const updateCountdown = () => {
       let currentDate = new Date();
       let twentySix = new Date("January 1, 2026");
-      let dateEquation = Math.floor(((twentySix - currentDate) / 1000) / 60);
-      let dateArray = dateEquation.toString().split('');
-      let minutesWithComma = dateArray.slice(0, 3).join('') + "," + dateArray.slice(3, 6).join('');
+      let dateEquation = Math.floor((twentySix - currentDate) / 1000 / 60);
+      let dateArray = dateEquation.toString().split("");
+      let minutesWithComma = dateArray.toSpliced(dateArray.length - 3, 0, ",");
       setMinutesWithComma(minutesWithComma);
       setAnimate(true);
       setTimeout(() => setAnimate(false), 5000);
@@ -23,9 +23,9 @@ const Minutes = () => {
   }, []);
 
   return (
-      <h1 id="time-container" className={animate ? 'backToBlue' : ''}>
-        {minutesWithComma}
-        </h1>
+    <h1 id="time-container" className={animate ? "backToBlue" : ""}>
+      {minutesWithComma}
+    </h1>
   );
 };
 
