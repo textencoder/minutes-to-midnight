@@ -5,39 +5,43 @@ import ProgressBar from "./components/ProgressBar/ProgressBar";
 function App() {
   const [minutes, setMinutes] = useState({
     total: "",
-    elapsed: ""
+    elapsed: "",
   });
-  const [percentCompleted, setPercentCompleted] = useState("")
+  const [percentCompleted, setPercentCompleted] = useState("");
   //const [animate, setAnimate] = useState(false);
-
-  console.log(minutes);
 
   useEffect(() => {
     const updateCountdown = () => {
       let currentDate = new Date();
-      let firstOfYear = new Date("January 1, 2025");
-      let twentySix = new Date("January 1, 2026");
+      let firstOfCurrentYear = new Date(
+        `January 1, ${currentDate.getFullYear()}`
+      );
+      let firstOfNextYear = new Date(
+        `January 1, ${currentDate.getFullYear() + 1}`
+      );
       const totalMinutesInYear = Math.floor(
-        (twentySix - firstOfYear) / 1000 / 60
+        (firstOfNextYear - firstOfCurrentYear) / 1000 / 60
       );
       const minutesElapsed =
-        totalMinutesInYear - Math.floor((twentySix - currentDate) / 1000 / 60);
-      //console.log("dateEquation: ", dateEquation)
+        totalMinutesInYear -
+        Math.floor((firstOfNextYear - currentDate) / 1000 / 60);
       //let dateArray = dateEquation.toString().split("");
       //let minutesWithComma = dateArray.toSpliced(dateArray.length - 3, 0, ",").join("");
       setMinutes({
         total: totalMinutesInYear,
-        elapsed: minutesElapsed
+        elapsed: minutesElapsed,
       });
-      setPercentCompleted(((minutesElapsed / totalMinutesInYear) * 100).toFixed(1))
+      setPercentCompleted(
+        ((minutesElapsed / totalMinutesInYear) * 100).toFixed(1)
+      );
       //setAnimate(true);
       //setTimeout(() => setAnimate(false), 5000);
     };
 
-    updateCountdown(); // Initial call to set the countdown immediately
-    const intervalId = setInterval(updateCountdown, 60000); // Update every minute
+    updateCountdown();
+    const intervalId = setInterval(updateCountdown, 60000);
 
-    return () => clearInterval(intervalId); // Cleanup interval on component unmount
+    return () => clearInterval(intervalId);
   }, []);
 
   return (
@@ -45,7 +49,16 @@ function App() {
       <div className="full-wrapper">
         <div className="statistics">
           <p className="percent-completed">{percentCompleted}%</p>
-          <p className="minutes-counter">{minutes.elapsed}/{minutes.total}</p>
+          <p className="minutes-counter">
+            {minutes.elapsed.toString().length > 3
+              ? minutes.elapsed
+                  .toString()
+                  .split("")
+                  .toSpliced(minutes.elapsed.toString().length - 3, 0, ",")
+                  .join("")
+              : minutes.elapsed}
+            /{minutes.total.toString().split("").toSpliced(3, 0, ",").join("")}
+          </p>
         </div>
         <ProgressBar progress={percentCompleted} />
       </div>
