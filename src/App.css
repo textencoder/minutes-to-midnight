@@ -1,47 +1,72 @@
-#root {
-  width: 80%;
-  height: 100%;
-  padding: 30px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  cursor: default;
-}
+:root {
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background: linear-gradient(145deg, #242424, rgb(12, 12, 12));
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
-#face {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  cursor: default;
 }
 
-#alert {
-  font-family: 'Oxanium', sans-serif;
-  font-weight: 200;
-  font-size: 1rem;
-  font-weight: 500; 
-  color: #dc143c;
-  animation: blinker 1s infinite;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#time-container {
-  font-family: 'Oxanium', sans-serif;
-  font-weight: 600;
-  font-size: clamp(4rem, 18vw, 8rem);
-  color: dodgerblue;
+body {
   display: grid;
   place-items: center;
+  width: 100vw;
+  height: 100dvh;
 }
 
-#minutes-left {
-  font-family: 'Oxanium', sans-serif;
-  font-weight: 200;
-  font-size: clamp(1.25rem, 4vw, 1.5rem);
-  font-weight: 500; 
-  color: dodgerblue;
+.full-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5px;
+}
+
+.statistics {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2.5px;
+
+  p {
+    font-family: "Google Sans Code", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+
+.progress-bar-wrapper {
+  height: 100px;
+  width: 500px;
+  border: 1px solid white;
+  padding: 10px;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(115, 115, 115, 0.15);
+}
+
+.progress {
+  height: 100%;
+  background-color: dodgerblue;
 }
 
 .backToBlue {
@@ -50,15 +75,16 @@
 
 @keyframes backToBlue {
   0% {
-      color: dodgerblue;
+    color: dodgerblue;
   }
 
-  25%, 75% {
-      color: crimson; 
+  25%,
+  75% {
+    color: crimson;
   }
-  
+
   100% {
-      color: dodgerblue;
+    color: dodgerblue;
   }
 }
 
@@ -68,14 +94,36 @@
 
 @keyframes blinker {
   0% {
-      opacity: 0%;
+    opacity: 0%;
   }
 
   50% {
-      opacity: 100%;
+    opacity: 100%;
   }
 
   100% {
-      opacity: 0%;
+    opacity: 0%;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .progress-bar-wrapper {
+    height: 80px;
+    width: calc(100vw - 50px);
+    border: 1px solid white;
+    padding: 10px;
   }
 }
