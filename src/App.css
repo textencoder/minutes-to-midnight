@@ -35,6 +35,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2.5px;
+  margin-bottom: 24px;
 }
 
 .statistics {

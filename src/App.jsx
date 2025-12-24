@@ -25,8 +25,6 @@ function App() {
       const minutesElapsed =
         totalMinutesInYear -
         Math.floor((firstOfNextYear - currentDate) / 1000 / 60);
-      //let dateArray = dateEquation.toString().split("");
-      //let minutesWithComma = dateArray.toSpliced(dateArray.length - 3, 0, ",").join("");
       setMinutes({
         total: totalMinutesInYear,
         elapsed: minutesElapsed,
