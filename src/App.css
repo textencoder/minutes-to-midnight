@@ -57,6 +57,7 @@ body {
   width: 500px;
   border: 1px solid white;
   padding: 10px;
+  box-shadow: 0 0 2.5px hsla(0, 0%, 100%, 0.5);
 }
 
 .progress-bar {
@@ -67,7 +68,26 @@ body {
 
 .progress {
   height: 100%;
-  background-color: dodgerblue;
+  background: linear-gradient(
+    90deg,
+    hsl(210, 100%, 50%) 0%,
+    hsl(206, 100%, 50%) 25%,
+    hsl(202, 100%, 50%) 50%,
+    hsl(206, 100%, 50%) 75%,
+    hsl(210, 100%, 50%) 100%
+  );
+  background-size: 200% 100%;
+  animation: slideGradient 4s linear infinite;
+  box-shadow: 0 0 5px hsl(206, 100%, 50%);
+}
+
+@keyframes slideGradient {
+  0% {
+    background-position: 200% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
 }
 
 .backToBlue {
@@ -107,7 +127,7 @@ body {
   }
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -118,7 +138,7 @@ body {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
 
 @media screen and (max-width: 550px) {
   .progress-bar-wrapper {
