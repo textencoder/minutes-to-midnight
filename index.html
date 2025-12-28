@@ -8,11 +8,10 @@
       href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:wght@400&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/png" href="/icon22025.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      2025 Progress Bar | Track this year's progress with progressbar.fyi
-    </title>
+    <!-- <title>
+      2025 Progress Bar — Track this year's progress with progressbar.fyi
+    </title> -->
     <meta
       name="description"
       content="Visualize the year with progressbar.fyi. See 2025 progress in real-time and stay aware of how time passes."
@@ -22,7 +21,7 @@
     <!-- Open Graph / Social Sharing -->
     <meta
       property="og:title"
-      content="2025 Progress Bar | Track this year's progress with progressbar.fyi"
+      content="2025 Progress Bar — Track this year's progress with progressbar.fyi"
     />
     <meta
       property="og:description"
@@ -49,7 +48,7 @@
     />
 
     <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/time-sand.svg" type="image/x-icon" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -66,5 +65,8 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      document.title = `${new Date().getFullYear()} Progress Bar — Track this year's progress with progressbar.fyi`
+    </script>
   </body>
 </html>
