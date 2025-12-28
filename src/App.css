@@ -46,7 +46,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 12.5px;
+    padding: 10px;
 
     span {
       display: flex;
@@ -70,17 +70,24 @@ body {
   }
 }
 
+.minutes-counter {
+  display: flex;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  span {
+    padding: 0 5px;
+  }
+
+  span:last-of-type {
+    color: rgb(12, 12, 12);
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+}
+
 .full-wrapper {
   display: grid;
   place-items: center;
   height: 90%;
-}
-
-.statistics {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 2.5px;
 }
 
 .progress-bar-wrapper {
@@ -96,6 +103,7 @@ body {
   height: 100%;
   width: 100%;
   background-color: rgba(115, 115, 115, 0.15);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 }
 
 .progress {
