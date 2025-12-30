@@ -32,7 +32,7 @@ function App() {
         remaining: totalMinutesInYear - minutesElapsed,
       });
       setPercentCompleted(
-        ((minutesElapsed / totalMinutesInYear) * 100).toFixed(0)
+        Math.floor((minutesElapsed / totalMinutesInYear) * 100).toFixed(0)
       );
       //setAnimate(true);
       //setTimeout(() => setAnimate(false), 5000);
