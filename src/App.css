@@ -53,18 +53,18 @@ body {
       align-items: center;
       font-size: 1.2rem;
       gap: 10px;
-      color:rgba(255, 255, 255, 0.25);
+      color: rgba(255, 255, 255, 0.25);
       font-weight: 500;
     }
 
     svg {
-      fill:rgba(255, 255, 255, 0.25);
+      fill: rgba(255, 255, 255, 0.25);
       transition: transform 0.3s ease-in-out, fill 0.3s ease-in-out;
     }
 
     svg:hover {
       cursor: pointer;
-      fill:rgba(255, 255, 255, 1);
+      fill: rgba(255, 255, 255, 1);
       transform: rotate(180deg);
     }
   }
@@ -104,6 +104,17 @@ body {
   width: 100%;
   background-color: rgba(115, 115, 115, 0.15);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+
+  display: grid;
+  place-items: center;
+  position: relative;
+
+  p {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    font-size: 2rem;
+    font-weight: 500;
+    z-index: 5;
+  }
 }
 
 .progress {
@@ -119,14 +130,8 @@ body {
   background-size: 200% 100%;
   animation: slideGradient 4s linear infinite;
   box-shadow: 0 0 5px hsl(206, 100%, 50%);
-  display: grid;
-  place-items: center;
-
-  p {
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    font-size: 2rem;
-    font-weight: 500;
-  }
+  position: absolute;
+  left: 0%;
 }
 
 @keyframes slideGradient {
